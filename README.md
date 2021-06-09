@@ -58,3 +58,21 @@ If using a Logitech F710 controller:
 * Y puts the car into DRIVE
 * A puts the car into REVERSE
 * B puts the car into NEUTRAL
+
+# Running directly (do not depend on Docker)
+
+```
+$ cd car_demo
+
+# install dependency of all packages
+$ rosdep install --from-paths src --ignore-src -r -y
+
+# compile
+$ catkin_make
+
+# setup environment
+$ source devel/setup.bash
+
+# run
+$ roslaunch car_demo demo.launch
+```
